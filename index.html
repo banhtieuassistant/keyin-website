@@ -146,9 +146,6 @@
       footer p { color:var(--muted); font-size:14px; margin:0; max-width:46em; }
       footer nav { display:flex; gap:18px; flex-wrap:wrap; }
       footer nav a { color:var(--ink-2); text-decoration:none; font-size:14.5px; font-weight:600; }
-      a.is-disabled { opacity:.55; cursor:not-allowed !important; pointer-events:none; text-decoration:none; }
-      .dl-notice { display:inline-block; font-size:14.5px; font-weight:600; color:var(--warn-ink); background:var(--warn-bg); border:1px solid var(--warn-line); border-radius:10px; padding:8px 14px; margin:2px 0 12px; }
-      .cta-row .dl-notice, section .dl-notice { margin-top:4px; }
     </style>
   </head>
   <body>
@@ -159,12 +156,12 @@
           <a href="#video">Video</a>
           <a href="#cach-dung" data-i18n="nav-how">Cách dùng</a>
           <a href="#cai-dat" data-i18n="nav-install">Cài đặt</a>
-          <a href="#moi-o-052" data-i18n="nav-new">Mới ở 0.5.2</a>
+          <a href="#moi-o-054" data-i18n="nav-new">Mới ở 0.5.4</a>
           <span class="lang-toggle" role="group" aria-label="Language / Ngôn ngữ">
             <button type="button" id="btn-vi" aria-pressed="true">VI</button>
             <button type="button" id="btn-en" aria-pressed="false">EN</button>
           </span>
-          <a class="dl is-disabled" aria-disabled="true" data-i18n="nav-dl">Tải KeyIn 0.5.2</a>
+          <a class="dl" href="#cai-dat" data-i18n="nav-dl">Tải KeyIn 0.5.4</a>
         </nav>
       </div>
     </div>
@@ -172,16 +169,15 @@
     <main id="top">
       <div class="wrap">
         <div class="hero">
-          <span class="status-pill"><span class="dot"></span><span data-i18n="hero-pill">Bản dùng thử v0.5.2 · Mã nguồn mở</span></span>
+          <span class="status-pill"><span class="dot"></span><span data-i18n="hero-pill">Bản dùng thử v0.5.4 · Mã nguồn mở</span></span>
           <h1>KeyIn<span class="thin" data-i18n="hero-thin">Gõ cả Anh · Việt · Trung bằng một bộ gõ duy nhất, không cần chuyển qua lại.</span></h1>
           <p class="lede" data-i18n="hero-lede">Bạn cứ gõ như bình thường. KeyIn <strong>tự biết mỗi từ bạn gõ là tiếng gì</strong>: gõ Telex thì ra tiếng Việt, gõ Pinyin thì ra chữ Hán, tiếng Anh thì để nguyên. Mọi thứ chạy <strong>ngay trên máy của bạn</strong>, có bản cho cả <strong>Mac</strong> và <strong>Windows</strong>.</p>
           <div class="cta-row">
-            <a class="btn btn-primary is-disabled" aria-disabled="true" data-i18n="cta-mac">Tải cho macOS</a>
-            <a class="btn btn-ghost is-disabled" aria-disabled="true" data-i18n="cta-win">Tải cho Windows</a>
+            <a class="btn btn-primary" href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-macos-arm64.pkg" data-i18n="cta-mac">Tải cho macOS</a>
+            <a class="btn btn-ghost" href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-x64.msi" data-i18n="cta-win">Tải cho Windows</a>
             <a class="btn btn-ghost" href="https://github.com/tuoitrevohoc/KeyIn">GitHub</a>
           </div>
-          <p style="margin:0"><span class="dl-notice" data-i18n="dl-notice">Tạm thời ngưng tải xuống do bộ cài đặt đang gặp vấn đề.</span></p>
-          <p class="req-line" data-i18n="req-line">macOS: Apple Silicon · macOS 27 trở lên &nbsp;·&nbsp; Windows: 10/11</p>
+          <p class="req-line" data-i18n="req-line">macOS: Apple Silicon · macOS 26.0 trở lên &nbsp;·&nbsp; Windows: 10/11</p>
         </div>
 
         <!-- Video giới thiệu — đưa lên trên -->
@@ -254,16 +250,16 @@
         </div>
       </section>
 
-      <!-- Mới ở bản 0.5.2 -->
-      <section id="moi-o-052" class="anchor">
+      <!-- Mới ở bản 0.5.4 -->
+      <section id="moi-o-054" class="anchor">
         <div class="wrap">
           <div class="sec-head">
-            <h2 data-i18n="new-h2">Mới ở bản 0.5.2</h2>
-            <p data-i18n="new-p">Hai thay đổi nhỏ mà tiện: chọn gợi ý bằng phím mũi tên, và bản Windows có logo KeyIn.</p>
+            <h2 data-i18n="new-h2">Mới ở bản 0.5.4</h2>
+            <p data-i18n="new-p">Bản này tập trung vào bộ cài macOS: đã ký và được Apple chứng nhận nên cài đặt mượt mà, không còn cảnh báo. Phần gõ không thay đổi so với 0.5.3.</p>
           </div>
           <div class="grid2">
-            <div class="card"><h3 data-i18n="n1h">Phím ↑ ↓ chọn gợi ý</h3><p data-i18n="n1p">Giờ bạn dùng phím mũi tên lên / xuống để chọn trong danh sách gợi ý, khỏi cần với tay bấm phím số.</p></div>
-            <div class="card"><h3 data-i18n="n2h">Bản Windows có logo KeyIn</h3><p data-i18n="n2p">Bản Windows giờ hiện logo KeyIn — nhìn là nhận ra ngay, không còn lẫn với biểu tượng mặc định của Windows.</p></div>
+            <div class="card"><h3 data-i18n="n1h">Bộ cài macOS đã ký &amp; notarized</h3><p data-i18n="n1p">Bộ cài macOS giờ đã được ký bằng Developer ID và notarized bởi Apple, nên không còn hiện cảnh báo “Apple could not verify” khi cài nữa — cứ mở file .pkg là cài thẳng.</p></div>
+            <div class="card"><h3 data-i18n="n2h">Yêu cầu macOS 26.0 trở lên</h3><p data-i18n="n2p">Bản 0.5.4 cần macOS 26.0 trở lên (Apple Silicon). Phần gõ giữ nguyên như bản 0.5.3, không có thay đổi nào về cách gõ.</p></div>
           </div>
         </div>
       </section>
@@ -277,8 +273,8 @@
           </div>
           <h3 data-i18n="mac-h3">Cài trên macOS</h3>
           <ol class="steps" style="margin-top:12px">
-            <li><span class="sn"></span><p data-i18n="mac-s1"><strong>Tải file cài về:</strong> <a class="is-disabled" aria-disabled="true"><code>KeyIn-0.5.2-macos-arm64.pkg</code></a> (khoảng 9,9 MB).</p></li>
-            <li><span class="sn"></span><p data-i18n="mac-s2"><strong>Mở file vừa tải.</strong> Đang dùng bản cũ thì trước hết hãy chuyển sang bộ gõ ABC và thoát hẳn KeyIn trong Activity Monitor. Vì bản 0.5.2 chưa được Apple chứng nhận, lần đầu macOS sẽ chặn không cho cài — bạn vào <strong>System Settings → Privacy &amp; Security</strong>, bấm <strong>Open Anyway</strong> rồi cài tiếp.</p></li>
+            <li><span class="sn"></span><p data-i18n="mac-s1"><strong>Tải file cài về:</strong> <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-macos-arm64.pkg"><code>KeyIn-0.5.4-macos-arm64.pkg</code></a> (khoảng 14,3 MB).</p></li>
+            <li><span class="sn"></span><p data-i18n="mac-s2"><strong>Mở file vừa tải và cài theo hướng dẫn.</strong> Đang dùng bản cũ thì trước hết hãy chuyển sang bộ gõ ABC và thoát hẳn KeyIn trong Activity Monitor. Bộ cài đã được ký và notarized nên macOS sẽ không hiện cảnh báo “Apple could not verify” nữa.</p></li>
             <li><span class="sn"></span><p data-i18n="mac-s3"><strong>Đăng xuất rồi đăng nhập lại.</strong> Sau đó vào <strong>System Settings → Keyboard → Text Input → Edit → +</strong> và thêm KeyIn (nằm trong mục Vietnamese).</p></li>
             <li><span class="sn"></span><p data-i18n="mac-s4"><strong>Chọn KeyIn</strong> trong menu bộ gõ trên thanh menu là gõ được ngay. Muốn chỉnh thêm thì bấm vào biểu tượng KeyIn → <strong>Tùy chỉnh…</strong></p></li>
           </ol>
@@ -286,29 +282,28 @@
           <h3 style="margin-top:28px" data-i18n="win-h3">Cài trên Windows</h3>
           <div class="pickbox" data-i18n="pickbox"><strong>Tải bản nào?</strong> Hầu hết máy Windows đều dùng <strong>bản thường</strong> — bạn cứ tải bản đó. Bản <strong>ARM</strong> chỉ dành cho mấy máy Windows chạy chip ARM, loại này ít gặp: ví dụ laptop chip Snapdragon, hoặc Windows cài trong máy ảo trên Mac chip Apple Silicon. Không chắc máy mình thuộc loại nào? Mở <strong>Settings → System → About</strong>, nhìn dòng <strong>System type</strong>: thấy chữ “ARM” thì mới tải bản ARM. Còn lăn tăn thì cứ tải bản thường.</div>
           <ol class="steps" style="margin-top:12px">
-            <li><span class="sn"></span><p data-i18n="win-s1"><strong>Tải file cài về rồi mở lên:</strong> <a class="is-disabled" aria-disabled="true"><code>KeyIn-0.5.2-windows-x64.msi</code></a> — bản thường, đa số mọi người dùng bản này (khoảng 8,3 MB). Máy chip ARM mới tải bản <a class="is-disabled" aria-disabled="true"><code>KeyIn-0.5.2-windows-arm64.msi</code></a> (khoảng 5,8 MB). Đang dùng bản 0.4 thì cứ cài đè lên, không cần gỡ bản cũ.</p></li>
-            <li><span class="sn"></span><p data-i18n="win-s2"><strong>Nếu Windows hiện cảnh báo SmartScreen:</strong> đó là vì bản này chưa có chữ ký số. Bấm <strong>More info → Run anyway</strong> là cài tiếp được.</p></li>
+            <li><span class="sn"></span><p data-i18n="win-s1"><strong>Tải file cài về rồi mở lên:</strong> <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-x64.msi"><code>KeyIn-0.5.4-windows-x64.msi</code></a> — bản thường, đa số mọi người dùng bản này (khoảng 12,0 MB). Máy chip ARM mới tải bản <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-arm64.msi"><code>KeyIn-0.5.4-windows-arm64.msi</code></a> (khoảng 6,9 MB). Đang dùng bản cũ thì cứ cài đè lên, không cần gỡ bản cũ.</p></li>
+            <li><span class="sn"></span><p data-i18n="win-s2"><strong>Lưu ý:</strong> bộ cài Windows chưa được code-sign nên SmartScreen sẽ cảnh báo. Bấm <strong>More info → Run anyway</strong> là cài tiếp được.</p></li>
             <li><span class="sn"></span><p data-i18n="win-s3"><strong>Thêm KeyIn vào danh sách bàn phím:</strong> vào <strong>Settings → Time &amp; language → Language &amp; region</strong>. Nếu chưa có tiếng <strong>Vietnamese</strong> thì thêm vào, rồi mở <strong>Language options</strong> của tiếng Việt và thêm bàn phím <strong>KeyIn</strong>.</p></li>
             <li><span class="sn"></span><p data-i18n="win-s4"><strong>Đăng xuất rồi đăng nhập lại</strong>, sau đó bấm <strong>Win + Space</strong> chọn KeyIn là gõ được. Sau này muốn gỡ thì vào <strong>Settings → Apps → Installed apps</strong>.</p></li>
           </ol>
           <div class="cta-row" style="justify-content:flex-start;margin-top:20px">
-            <a class="btn btn-primary is-disabled" aria-disabled="true" data-i18n="cta-mac2">Tải bản macOS (.pkg)</a>
-            <a class="btn btn-ghost is-disabled" aria-disabled="true" data-i18n="cta-win-x64">Tải bản Windows thường (.msi)</a>
-            <a class="btn btn-ghost is-disabled" aria-disabled="true" data-i18n="cta-win-arm">Tải bản Windows ARM (.msi)</a>
+            <a class="btn btn-primary" href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-macos-arm64.pkg" data-i18n="cta-mac2">Tải bản macOS (.pkg)</a>
+            <a class="btn btn-ghost" href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-x64.msi" data-i18n="cta-win-x64">Tải bản Windows thường (.msi)</a>
+            <a class="btn btn-ghost" href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-arm64.msi" data-i18n="cta-win-arm">Tải bản Windows ARM (.msi)</a>
           </div>
-          <p style="margin:14px 0 0"><span class="dl-notice" data-i18n="dl-notice">Tạm thời ngưng tải xuống do bộ cài đặt đang gặp vấn đề.</span></p>
-          <p style="color:var(--muted);font-size:14px;margin-top:18px" data-i18n="install-note">Lưu ý: 0.5.2 là bản dùng thử — Mac chip Intel chưa có bản riêng, và KeyIn chưa tự cập nhật được, có bản mới thì bạn tải lại. Mã nguồn mở theo giấy phép LGPL-3.0, tự build được theo hướng dẫn trên GitHub. Từ điển: Rime Luna Pinyin, CC-CEDICT / CVDICT, VNTK.</p>
+          <p style="color:var(--muted);font-size:14px;margin-top:18px" data-i18n="install-note">Lưu ý: 0.5.4 là bản dùng thử — Mac chip Intel chưa có bản riêng, và KeyIn chưa tự cập nhật được, có bản mới thì bạn tải lại. Mã nguồn mở theo giấy phép LGPL-3.0, tự build được theo hướng dẫn trên GitHub. Từ điển: Rime Luna Pinyin, CC-CEDICT / CVDICT, VNTK.</p>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="wrap foot-grid">
-        <p data-i18n="footer-p"><strong style="color:var(--ink)">KeyIn</strong> — bộ gõ Anh · Việt Telex · Trung Pinyin chạy ngay trên máy, có bản cho macOS và Windows. Bản dùng thử 0.5.2 · getkeyin.app</p>
+        <p data-i18n="footer-p"><strong style="color:var(--ink)">KeyIn</strong> — bộ gõ Anh · Việt Telex · Trung Pinyin chạy ngay trên máy, có bản cho macOS và Windows. Bản dùng thử 0.5.4 · getkeyin.app</p>
         <nav>
-          <a class="is-disabled" aria-disabled="true" data-i18n="footer-mac">Bản macOS</a>
-          <a class="is-disabled" aria-disabled="true" data-i18n="footer-win">Bản Windows</a>
-          <a class="is-disabled" aria-disabled="true">GitHub Releases</a>
+          <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-macos-arm64.pkg" data-i18n="footer-mac">Bản macOS</a>
+          <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-x64.msi" data-i18n="footer-win">Bản Windows</a>
+          <a href="https://github.com/tuoitrevohoc/KeyIn/releases">GitHub Releases</a>
           <a href="https://github.com/tuoitrevohoc/KeyIn">GitHub</a>
           <a href="#top" data-i18n="footer-top">Lên đầu trang</a>
         </nav>
@@ -327,14 +322,13 @@
           'nav-how': 'How it works',
           'nav-install': 'Install',
           'nav-new': "What's new",
-          'nav-dl': 'Download KeyIn 0.5.2',
-          'hero-pill': 'Preview v0.5.2 · Open source',
+          'nav-dl': 'Download KeyIn 0.5.4',
+          'hero-pill': 'Preview v0.5.4 · Open source',
           'hero-thin': 'Type English · Vietnamese · Chinese in one flow — no need to switch keyboards.',
           'hero-lede': 'Just type normally — KeyIn <strong>figures out the language word by word</strong>: Telex becomes Vietnamese, Pinyin becomes Chinese characters, and English stays as it is. Everything is processed <strong>right on your own computer</strong> — available for both <strong>Mac</strong> and <strong>Windows</strong>.',
           'cta-mac': 'Download for macOS',
           'cta-win': 'Download for Windows',
-          'dl-notice': 'Downloads are temporarily unavailable due to an installer issue.',
-          'req-line': 'macOS: Apple Silicon · macOS 27 or later &nbsp;·&nbsp; Windows: 10/11',
+          'req-line': 'macOS: Apple Silicon · macOS 26.0 or later &nbsp;·&nbsp; Windows: 10/11',
           'fig-cap': 'A 30-second look at KeyIn: English, Vietnamese and Chinese typed in one flow, with no switching key. <strong>Click the image to watch the video with sound.</strong>',
           'chip-en-p': 'Type it straight, just like normal.',
           'chip-vi-p': 'All the Vietnamese accents and tone marks.',
@@ -363,31 +357,31 @@
           'f3p': 'Characters you pick often are suggested first next time — and it’s only stored on your own computer.',
           'privacy-h2': 'Private: 100% on-device',
           'privacy-p': 'No servers, nothing sent anywhere, no tracking. KeyIn only remembers the language of the last 3 words you typed to guess the next one — it never reads what your text actually says.',
-          'new-h2': "What's new in 0.5.2",
-          'new-p': 'Two small but handy changes: pick suggestions with the arrow keys, and the Windows build gets the KeyIn logo.',
-          'n1h': 'Arrow keys pick suggestions',
-          'n1p': 'The ↑ and ↓ arrow keys now move through the candidate list, so you can choose a suggestion without reaching for the number keys.',
-          'n2h': 'KeyIn logo on Windows',
-          'n2p': 'The Windows build now shows the KeyIn logo — easy to spot, no more generic Windows icon.',
+          'new-h2': "What's new in 0.5.4",
+          'new-p': 'This release focuses on the macOS installer: signed and notarized by Apple for a smooth install, with no warnings. Typing is unchanged from 0.5.3.',
+          'n1h': 'macOS installer signed & notarized',
+          'n1p': 'The macOS installer is now signed with a Developer ID and notarized by Apple, so the “Apple could not verify” warning is gone — just open the .pkg and install.',
+          'n2h': 'Requires macOS 26.0 or later',
+          'n2p': 'Version 0.5.4 requires macOS 26.0 or later on Apple Silicon. Typing behavior is unchanged from 0.5.3.',
           'install-h2': 'Install',
           'install-p': 'Click your operating system and the download starts right away — no in-between pages.',
           'mac-h3': 'Install on macOS',
-          'mac-s1': '<strong>Download the installer:</strong> <a class="is-disabled" aria-disabled="true"><code>KeyIn-0.5.2-macos-arm64.pkg</code></a> (about 9.9 MB).',
-          'mac-s2': '<strong>Open the installer.</strong> If you’re upgrading from an older version, first switch to the ABC keyboard and quit KeyIn in Activity Monitor. Version 0.5.2 isn’t notarized by Apple yet, so macOS will block it the first time — go to <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>, then continue installing.',
+          'mac-s1': '<strong>Download the installer:</strong> <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-macos-arm64.pkg"><code>KeyIn-0.5.4-macos-arm64.pkg</code></a> (about 14.3 MB).',
+          'mac-s2': '<strong>Open the installer and follow the prompts.</strong> If you’re upgrading from an older version, first switch to the ABC keyboard and quit KeyIn in Activity Monitor. The installer is signed and notarized, so macOS won’t show the “Apple could not verify” warning.',
           'mac-s3': '<strong>Log out and log back in</strong>, then add KeyIn at <strong>System Settings → Keyboard → Text Input → Edit → +</strong> (under Vietnamese).',
           'mac-s4': '<strong>Select KeyIn</strong> from the input menu in the menu bar and start typing. For more settings, use the KeyIn icon → <strong>Customize…</strong>',
           'mac-uninstall': '<strong>Uninstall (Mac):</strong> switch to the ABC keyboard, remove KeyIn from the Keyboard settings, and delete <span class="mono">/Library/Input Methods/KeyIn.app</span>.',
           'win-h3': 'Install on Windows',
           'pickbox': '<strong>Which one should I download?</strong> Almost every Windows PC uses the <strong>regular version</strong> — download that one first. The <strong>ARM</strong> version is only for the small number of Windows machines with an ARM chip (rare: for example a Snapdragon laptop, or Windows running in a virtual machine on an Apple Silicon Mac). To check quickly, open <strong>Settings → System → About</strong> and look at the <strong>System type</strong> line — only pick ARM if it says “ARM”. Still not sure? Just get the regular version.',
-          'win-s1': '<strong>Download the installer</strong> and run it: <a class="is-disabled" aria-disabled="true"><code>KeyIn-0.5.2-windows-x64.msi</code></a> — the regular Windows version most people use (about 8.3 MB); or <a class="is-disabled" aria-disabled="true"><code>KeyIn-0.5.2-windows-arm64.msi</code></a> — only for ARM-chip machines (about 5.8 MB). Already on 0.4? Just install over it — it upgrades in place.',
-          'win-s2': '<strong>If SmartScreen warns you:</strong> the Windows version isn’t code-signed yet — click <strong>More info → Run anyway</strong> to continue.',
+          'win-s1': '<strong>Download the installer</strong> and run it: <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-x64.msi"><code>KeyIn-0.5.4-windows-x64.msi</code></a> — the regular Windows version most people use (about 12.0 MB); or <a href="https://github.com/tuoitrevohoc/KeyIn/releases/download/v0.5.4/KeyIn-0.5.4-windows-arm64.msi"><code>KeyIn-0.5.4-windows-arm64.msi</code></a> — only for ARM-chip machines (about 6.9 MB). Already on an older version? Just install over it — it upgrades in place.',
+          'win-s2': '<strong>Note:</strong> the Windows installer isn’t code-signed yet, so SmartScreen will warn you — click <strong>More info → Run anyway</strong> to continue.',
           'win-s3': '<strong>Add the keyboard:</strong> go to <strong>Settings → Time &amp; language → Language &amp; region</strong>, add <strong>Vietnamese</strong> (if you don’t have it yet), open its <strong>Language options</strong>, and add the <strong>KeyIn</strong> keyboard.',
           'win-s4': '<strong>Log out and log back in</strong>, then press <strong>Win + Space</strong> to select KeyIn and start typing. Uninstall at <strong>Settings → Apps → Installed apps</strong>.',
           'cta-mac2': 'Download for macOS (.pkg)',
           'cta-win-x64': 'Download regular Windows (.msi)',
           'cta-win-arm': 'Download Windows ARM (.msi)',
-          'install-note': 'Note: KeyIn 0.5.2 is a preview — there’s no Intel Mac build yet, and neither platform auto-updates yet. Open source under LGPL-3.0; you can build it yourself following the guide on GitHub. Dictionaries: Rime Luna Pinyin, CC-CEDICT / CVDICT, VNTK.',
-          'footer-p': '<strong style="color:var(--ink)">KeyIn</strong> — an on-device keyboard for English · Vietnamese Telex · Chinese Pinyin, available for macOS and Windows. Preview 0.5.2 · getkeyin.app',
+          'install-note': 'Note: KeyIn 0.5.4 is a preview — there’s no Intel Mac build yet, and neither platform auto-updates yet. Open source under LGPL-3.0; you can build it yourself following the guide on GitHub. Dictionaries: Rime Luna Pinyin, CC-CEDICT / CVDICT, VNTK.',
+          'footer-p': '<strong style="color:var(--ink)">KeyIn</strong> — an on-device keyboard for English · Vietnamese Telex · Chinese Pinyin, available for macOS and Windows. Preview 0.5.4 · getkeyin.app',
           'footer-mac': 'macOS version',
           'footer-win': 'Windows version',
           'footer-top': 'Back to top'
@@ -464,9 +458,9 @@
       // để bắt cả các link được tạo lại khi đổi ngôn ngữ VI | EN).
       (function () {
         var FILES = [
-          { name: 'KeyIn-0.5.2-windows-arm64.msi', event: 'download_windows_arm64' },
-          { name: 'KeyIn-0.5.2-windows-x64.msi', event: 'download_windows_x64' },
-          { name: 'KeyIn-0.5.2-macos-arm64.pkg', event: 'download_macos' }
+          { name: 'KeyIn-0.5.4-windows-arm64.msi', event: 'download_windows_arm64' },
+          { name: 'KeyIn-0.5.4-windows-x64.msi', event: 'download_windows_x64' },
+          { name: 'KeyIn-0.5.4-macos-arm64.pkg', event: 'download_macos' }
         ];
         document.addEventListener('click', function (e) {
           var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
@@ -477,7 +471,7 @@
               if (typeof gtag === 'function') {
                 gtag('event', FILES[i].event, {
                   file_name: FILES[i].name,
-                  file_version: '0.5.2',
+                  file_version: '0.5.4',
                   transport_type: 'beacon'
                 });
               }
